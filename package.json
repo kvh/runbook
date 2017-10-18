@@ -1,0 +1,18 @@
+{
+  "name": "runbook",
+  "version": "0.1.0",
+  "description": "Automate anything",
+  "main": "lib/runbook.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/kvh/runbook.git"
+  },
+  "author": "kvh",
+  "license": "Apache-2.0",
+}
