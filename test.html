@@ -1,0 +1,46 @@
+<html>
+  <head>
+  <script src="third_party/jquery.min.js"></script>
+  <script src="third_party/fuzzyset.js"></script>
+  <script src="third_party/math.min.js"></script>
+  <script src="third_party/moment.min.js"></script>
+  <script src="third_party/munkres.js"></script>
+  <script src="lib/similarity.js"></script>
+  <script src="lib/math_ext.js"></script>
+  <script src="lib/text_utils.js"></script>
+  <script src="lib/user_data.js"></script>
+  <script src="lib/action.js"></script>
+  <script src="lib/page.js"></script>
+  <script src="lib/runbook.js"></script>
+  <script src="lib/automate.js"></script>
+  <script src="lib/page_summarizer.js"></script>
+  <script src="lib/scorer.js"></script>
+  <script src="lib/definitions/field_types.js"></script>
+  <script src="lib/definitions/form_types.js"></script>
+  <script src="lib/definitions/clickable_types.js"></script>
+  </head>
+
+  <body>
+
+  <form>
+     Username:<br>
+    <input type="text" name="username" >
+    <br>
+    Password:<br>
+    <input type="password" name="password" >
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+  <p>Notice that the value of the "First name" field will not be submitted, because the input element does not have a name attribute.</p>
+
+  </body>
+  <script>
+    var rb = new runbook.Runbook({});
+    rb.executeTaskActionOnCurrentPage(
+      {"type":"form", "class":"login"},
+      {"username":"kvh", "password":"pasword"});
+  </script>
+</html>
