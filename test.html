@@ -22,9 +22,9 @@
 
   <body>
 
-  <form>
+  <form action="/action">
      Username:<br>
-    <input type="text" name="username" >
+    <input id="un" type="text" name="username" >
     <br>
     Password:<br>
     <input type="password" name="password" >
@@ -32,13 +32,11 @@
     <input type="submit" value="Submit">
   </form>
 
-  <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
-
-  <p>Notice that the value of the "First name" field will not be submitted, because the input element does not have a name attribute.</p>
+  <p>Test!</p>
 
   </body>
   <script>
-    var rb = new runbook.Runbook({});
+    var rb = new runbook.Runbook({submitForms: false});
     rb.executeTaskActionOnCurrentPage(
       {"type":"form", "class":"login"},
       {"username":"kvh", "password":"pasword"});
